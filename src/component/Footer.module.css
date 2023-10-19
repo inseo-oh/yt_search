@@ -1,0 +1,15 @@
+.Title {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Tilt Neon', sans-serif;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.Footer {
+  text-align: center;
+  padding: 48px 24px;
+  line-height: 1.8;
+  background: #111;
+  color: #eee;
+}

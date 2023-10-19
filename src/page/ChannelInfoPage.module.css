@@ -1,0 +1,100 @@
+.Container {
+  --action-bar-height: 44px;
+  --channel-art-height-ratio: 0.3;
+  --channel-art-height: calc(100% * var(--channel-art-height-ratio));
+  background-repeat: no-repeat;
+  background-position: center calc(0%);
+  background-attachment: fixed;
+  background-size: contain;
+}
+
+.Header {
+  position: sticky;
+  top: 0;
+}
+
+.ChannelArt {
+  --channel-art-height-ratio: 0.3;
+  height: calc(100vw * var(--channel-art-height-ratio));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.ProfileImage img {
+  margin: 15px auto;
+  display: block;
+  width: 80px;
+  border-radius: 50%;
+}
+
+.ChannelInfo {
+  text-align: center;
+  overflow: hidden;
+  padding: 0 12px;
+}
+
+.ChannelName {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.ChannelIdAndStats, .Description {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.2;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.VisitLink:link,
+.VisitLink:visited {
+  display: block;
+  margin-top: 16px;
+  font-size: 14px;
+  color: #900;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.VideoList {
+  margin-top: 16px;
+}
+
+.VideoList li {
+  overflow: hidden;
+}
+
+/* 태블릿 / 데스크톱 */
+@media screen and (min-width: 700px) {
+  .ChannelInfoAndProfileImage {
+    display: flex;
+    margin: 16px;
+    height: 150px;
+  }
+
+  .ProfileImage img {
+    width: 120px;
+  }
+
+  .ChannelInfo {
+    padding: 16px;
+    text-align: left;
+  }
+
+  .VideoList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    justify-content: space-around;
+    gap: 16px;
+  }
+}
+
+/* 데스크톱 */
+@media screen and (min-width: 1000px) {
+  .Container {
+    --channel-art-height: 300px;
+  }
+}

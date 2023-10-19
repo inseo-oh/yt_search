@@ -1,0 +1,51 @@
+.Container {
+  color: #222;
+  padding-bottom: 16px;
+}
+
+.Title {
+  padding: 16px;
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 1.4;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.Title span {
+  display: block;
+  margin: 8px;
+  white-space: nowrap;
+}
+
+.Introduction {
+  margin: 16px;
+  font-size: 30px;
+  line-height: 1.5;
+}
+
+.FeatureList {
+  margin: 16px;
+  list-style: disc;
+  padding: 0 40px;
+}
+
+.FeatureList li {
+  line-height: 1.5;
+  font-size: 23px;
+}
+
+.GetStartedButtonArea {
+  margin: 16px;
+}
+
+/* 태블릿 / 데스크톱 */
+@media screen and (min-width: 700px) {
+  .Title {
+    font-size: 130px;
+  }
+
+  .FeatureList li {
+    font-size: 33px;
+  }
+}

@@ -1,0 +1,10 @@
+.PageControls {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.CurrentPageDisplay {
+  margin: 0 16px;
+  font-size: 24px;
+}

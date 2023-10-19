@@ -1,0 +1,112 @@
+.Container {
+  cursor: pointer;
+  transition: 0.3s background;
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 16px 0px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.Container:hover {
+  background: #eee;
+}
+
+.Thumbnail {
+  width: 100%;
+}
+
+.Thumbnail img {
+  width: 100%;
+}
+
+.Description,
+.DescriptionWide {
+  padding: 8px 16px;
+  overflow: hidden;
+}
+
+.Description {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.DescriptionWide {
+  display: none;
+}
+
+.ChannelProfileImage {
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.DescriptionRight {
+  margin-left: 6px;
+}
+
+.DescriptionRight p {
+  margin-bottom: 4px;
+}
+
+.ViewCountAndTime {
+  color: #666;
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+/* 태블릿 / 데스크톱 */
+@media screen and (min-width: 700px) {
+  .Container{
+    flex-direction: row;
+  }
+
+  .Thumbnail {
+    width: 330px;
+    padding: 8px;
+    flex: 0 0 330px;
+  }
+
+  .Thumbnail img {
+    border-radius: 16px;
+  }
+
+  .Description {
+    display: none;
+  }
+
+  .DescriptionWide {
+    display: block;
+  }
+
+  .ViewCountAndTime {
+    margin-top: 10px;
+  }
+
+  .ChannelInfo {
+    display: flex;
+    height: 30px;
+    margin-top: 10px;
+  }
+
+  .ChannelProfileImage {
+    width: 30px;
+  }
+
+  .ChannelName {
+    line-height: 30px;
+    font-size: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .ShortDescription {
+    width: 100%;
+    margin-top: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #666;
+  }
+}

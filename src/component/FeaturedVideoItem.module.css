@@ -1,0 +1,61 @@
+.Container {
+  cursor: pointer;
+  transition: 0.3s background;
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 16px 0px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.Container:hover {
+  background: #eee;
+}
+
+.Thumbnail {
+  width: 100%;
+}
+
+.Thumbnail img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.Description,
+.DescriptionWide {
+  padding: 8px 16px;
+  overflow: hidden;
+}
+
+.Description {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+
+.VideoTitle {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.ChannelProfileImage {
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.DescriptionRight {
+  margin-left: 6px;
+  overflow: hidden;
+}
+
+.DescriptionRight p {
+  margin-bottom: 4px;
+}
+
+.ViewCountAndTime {
+  color: #666;
+  font-size: 12px;
+  line-height: 1.3;
+}

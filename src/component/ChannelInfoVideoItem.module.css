@@ -1,0 +1,52 @@
+.Container {
+  cursor: pointer;
+  transition: 0.3s background;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.Container:hover {
+  background: #eee;
+}
+
+.Thumbnail {
+  width: 100%;
+}
+
+.Thumbnail img {
+  width: 100%;
+}
+
+.Description {
+  padding-left: 16px;
+}
+
+.Title {
+  margin-bottom: 8px;
+}
+
+.DescriptionOther {
+  color: #666;
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+/* 태블릿 / 데스크톱 */
+@media screen and (min-width: 700px) {
+  .Container {
+    display: block;
+  }
+  .Thumbnail {
+    width: 100%;
+  }
+  .Thumbnail img {
+    border-radius: 16px;
+  }
+  .Description {
+    padding-left: 0px;
+    margin-top: 8px;
+  }
+}
