@@ -18,7 +18,7 @@ function FeaturedPageRow({ emoji, keyword, onError, details }) {
     }
   });
   return <section className={style.FeaturedSection}>
-    <a className={style.FeaturedSectionTitle} href={`/search/${encodeURIComponent(keyword)}`}>
+    <a className={style.FeaturedSectionTitle} href={`${process.env.PUBLIC_URL}/search/${encodeURIComponent(keyword)}`}>
       {emoji}{keyword}
     </a>
     <ul className={style.FeaturedSectionContent}>

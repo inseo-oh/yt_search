@@ -57,7 +57,7 @@ export default function VideoInfoPage({ onError }) {
       <YTIFramePlayer videoId={id} />
       <div className={style.Description}>
         <h3 className={style.Title}>{title}</h3>
-        <a className={style.ChannelInfo} href={`/channel/${channelId}`}>
+        <a className={style.ChannelInfo} href={`${process.env.PUBLIC_URL}/channel/${channelId}`}>
           <img className={style.ChannelProfileImage} src={channelProfileImage} />
           <span className={style.ChannelName}>{channelTitle}<span className={style.ChannelSubs}>18만</span></span>
         </a>

@@ -19,9 +19,9 @@ export default function ChannelInfoPage() {
         <li>로그인, 개인정보 수집 No!</li>
       </ul>
       <div className={style.GetStartedButtonArea}>
-        <Button href='/search'>검색 시작하기</Button>
+        <Button href={`${process.env.PUBLIC_URL}/search`}>검색 시작하기</Button>
         &nbsp;
-        <Button href='/featured'>뭘 검색할지 모르겠어요</Button>
+        <Button href={`${process.env.PUBLIC_URL}/featured`}>뭘 검색할지 모르겠어요</Button>
       </div>
     </Container>
   );
