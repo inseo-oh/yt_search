@@ -23,7 +23,7 @@ export default function ChannelInfoVideoItem({ videoId, snippet }) {
   //      이스케이핑을 하지 않도록 dangerouslySetInnerHTML를 사용함. HTTPS이기 때문에
   //      중간에 데이터가 변조되기 어려워 XSS 위험은 없음.
   return (
-    <a className={style.Container} href={`${process.env.PUBLIC_URL}/video/${videoId}`}>
+    <a className={style.Container} href={`#/video/${videoId}`}>
       <div className={style.Thumbnail}>
         <img src={snippet.thumbnails.medium.url}></img>
       </div>

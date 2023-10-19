@@ -26,7 +26,7 @@ export default function SearchChannelItem({ snippet, onError }) {
     }
   }
   return (
-    <a className={style.Container} href={`${process.env.PUBLIC_URL}/channel/${snippet.channelId}`}>
+    <a className={style.Container} href={`#/channel/${snippet.channelId}`}>
       <div className={style.ChannelImage}>
         <img src={channelImage}></img>
       </div>

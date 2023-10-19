@@ -9,10 +9,10 @@ export default function Header() {
       <Navbar.Toggle />
       <Navbar.Collapse>
         <Nav className="me-auto">
-          <Nav.Link href={process.env.PUBLIC_URL}>추천</Nav.Link>
-          <Nav.Link href={`${process.env.PUBLIC_URL}/search`}>찾아보기</Nav.Link>
-          <Nav.Link href='#'>기록</Nav.Link>
-          <Nav.Link href={`${process.env.PUBLIC_URL}/intro`}>소개</Nav.Link>
+          <Nav.Link href='#/'>추천</Nav.Link>
+          <Nav.Link href={`#/search`}>찾아보기</Nav.Link>
+          <Nav.Link href=''>기록</Nav.Link>
+          <Nav.Link href={`#/intro`}>소개</Nav.Link>
         </Nav>
         <Nav>
           <Nav.Link href='https://www.youtube.com/' target="_blank">YouTube로 가기</Nav.Link>

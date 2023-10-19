@@ -14,7 +14,7 @@ export default function SearchPage() {
     '영화',
   ];
   const suggestKeywordItems = suggestKeywords.map((keyword, i) => {
-    return <li key={i}><a href={`${process.env.PUBLIC_URL}/search/${encodeURIComponent(keyword)}`}>{keyword}</a></li>
+    return <li key={i}><a href={`#/search/${encodeURIComponent(keyword)}`}>{keyword}</a></li>
   })
   return (
     <div className={style.Container}>

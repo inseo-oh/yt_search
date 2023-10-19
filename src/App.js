@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import { useState } from 'react';
 import { Toast, ToastContainer } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -31,7 +31,7 @@ export default function App() {
         </Toast>
       </ToastContainer>
       <Header />
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <HashRouter>
         <Routes>
           <Route path={`/`} element={<FeaturedPage onError={onError} />} />
           <Route path={`/intro`} element={<IntroPage />} />
@@ -40,7 +40,7 @@ export default function App() {
           <Route path={`/channel/:id`} element={<ChannelInfoPage onError={onError} />} />
           <Route path={`/video/:id`} element={<VideoInfoPage onError={onError} />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
       <Footer />
 
     </div>
