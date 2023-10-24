@@ -1,9 +1,10 @@
+import { useEffect, useState } from 'react';
 import toHumanReadableNumberString from '../util/toHumanReadableNumber';
 import toRelativeTimeString from '../util/toRelativeTimeString';
 import { queryVideo } from '../util/yt';
 import style from './ChannelInfoVideoItem.module.css';
 
-export default function ChannelInfoVideoItem({ videoId, snippet }) {
+export default function ChannelInfoVideoItem({ videoId, snippet, onError }) {
   const [videoDetails, setVideoDetails] = useState(null);
 
   useEffect(function () {
