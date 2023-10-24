@@ -57,7 +57,9 @@ export default function FeaturedPage({ onError }) {
         setThumbnailUrls(thumbnailUrls => [
           ...thumbnailUrls,
           ...result.items.map(entry => {
-            return entry.snippet.thumbnails.medium.url
+            if (entry.id.kind == "youtube#video") {
+              return entry.snippet.thumbnails.medium.url;
+            }
           })
         ]);
         setSearchResults(searchResults => {
