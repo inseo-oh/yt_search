@@ -124,10 +124,4 @@
     margin-left: 4px;
 
   }
-  
-  .Description {
-    max-width: 1200px;
-    padding-left: calc((100% - 1200px) / 2);
-    padding-right: calc((100% - 1200px) / 2);
-  }
 }

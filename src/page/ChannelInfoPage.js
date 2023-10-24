@@ -62,7 +62,7 @@ export default function ChannelInfoPage({ onError }) {
       switch (entry.id.kind) {
         case "youtube#video":
           listContents.push(<li key={entry.id.videoId}>
-            <ChannelInfoVideoItem videoId={entry.id.videoId} snippet={entry.snippet} />
+            <ChannelInfoVideoItem videoId={entry.id.videoId} snippet={entry.snippet} onError={onError} />
           </li>);
           break;
       }
