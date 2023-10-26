@@ -28,7 +28,7 @@ export function queryVideo(videoId, callback, onError) {
     return;
   }
   if (videoInfoCache[videoId]) {
-    return videoInfoCache[videoId];
+    callback(videoInfoCache[videoId]);
   }
   gapi.client.youtube.videos.list({
     part: [
@@ -60,7 +60,7 @@ export function queryChannel(channelId, callback, onError) {
     return;
   }
   if (channelInfoCache[channelId]) {
-    return channelInfoCache[channelId];
+    callback(channelInfoCache[channelId]);
   }
   gapi.client.youtube.channels.list({
     part: [
