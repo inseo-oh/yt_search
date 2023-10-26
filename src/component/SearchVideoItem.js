@@ -14,13 +14,13 @@ export default function SearchVideoItem({ videoId, snippet, onError }) {
     queryChannel(snippet.channelId, function (result) {
       setChannelThumbnailUrl(result.snippet.thumbnails.medium.url);
     }, onError);
-  }, []);
+  }, [snippet.channelId]);
 
   useEffect(function () {
     queryVideo(videoId, function (result) {
       setVideoDetails(result);
     }, onError);
-  }, []);
+  }, [videoId]);
 
   let viewCount = "로딩 중";
 

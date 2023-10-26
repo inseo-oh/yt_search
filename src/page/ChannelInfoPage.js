@@ -17,12 +17,12 @@ export default function ChannelInfoPage({ onError }) {
     queryChannel(id, function (result) {
       setDetails(result);
     }, onError);
-  }, []);
+  }, [id]);
   useEffect(function () {
     queryChannelRecentVideos(id, desiredPageToken, function (result) {
       setSearchResult(result);
     }, onError);
-  }, [desiredPageToken]);
+  }, [id, desiredPageToken]);
 
   function onPrevPagePressed() {
     setDesiredPageToken(searchResult.prevPageToken);

@@ -23,7 +23,7 @@ export default function SearchResultPage({ onError }) {
     }, function (result) {
       setSearchResult(result);
     }, onError)
-  }, [ordering, desiredPageToken]);
+  }, [query, ordering, desiredPageToken]);
   let listContents = [];
   let pageCount = 0;
   let thumbnailUrls = [];

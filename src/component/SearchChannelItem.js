@@ -10,7 +10,7 @@ export default function SearchChannelItem({ snippet, onError }) {
     queryChannel(snippet.channelId, function (result) {
       setDetails(result);
     }, onError);
-  }, []);
+  }, [snippet.channelId]);
   let channelId = "로딩 중";
   let subs = "로딩 중";
   let channelImage = "";

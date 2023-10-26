@@ -11,7 +11,7 @@ export default function ChannelInfoVideoItem({ videoId, snippet, onError }) {
     queryVideo(videoId, function (result) {
       setVideoDetails(result);
     }, onError);
-  }, []);
+  }, [videoId]);
 
   let viewCount = "로딩 중";
 

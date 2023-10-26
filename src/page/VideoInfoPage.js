@@ -16,7 +16,7 @@ export default function VideoInfoPage({ onError }) {
     queryVideo(id, function (result) {
       setVideoDetails(result);
     }, onError);
-  }, []);
+  }, [id]);
 
   useEffect(function() {
     if (!videoDetails) {
