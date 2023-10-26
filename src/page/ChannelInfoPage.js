@@ -52,8 +52,11 @@ export default function ChannelInfoPage({ onError }) {
       subs = toHumanReadableNumberString(details.statistics.subscriberCount) + "명";
     }
     videoCount = toHumanReadableNumberString(details.statistics.videoCount) + "개";
-    // https://stackoverflow.com/questions/66413441/how-to-get-youtube-channel-banner-using-youtube-api-with-the-same-resolution
-    channelBannerImage = details.brandingSettings.image.bannerExternalUrl + "=w1920";
+    // 배너 이미지가 없는 경우도 있으니 확인함
+    if (details.brandingSettings.image) {
+      // https://stackoverflow.com/questions/66413441/how-to-get-youtube-channel-banner-using-youtube-api-with-the-same-resolution
+      channelBannerImage = details.brandingSettings.image.bannerExternalUrl + "=w1920";
+    }
   }
 
   let listContents = [];
@@ -74,6 +77,7 @@ export default function ChannelInfoPage({ onError }) {
   }
 
   const bannerStyle = {
+    display: channelBannerImage != "" ? "block" : "none",
     backgroundImage: `url(${channelBannerImage})`
   };
 
