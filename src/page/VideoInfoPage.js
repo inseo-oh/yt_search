@@ -28,7 +28,7 @@ export default function VideoInfoPage({ onError }) {
   }, [videoDetails]);
 
   let title = "로딩 중";
-  let description = [<li key={0}>"로딩 중"</li>];
+  let description = [<li key={0}>로딩 중</li>];
   let channelId = "";
   let publushDate = new Date();
   let viewCount = "로딩 중";
